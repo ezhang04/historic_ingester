@@ -9,6 +9,7 @@ Imports:
 
 start clickhouse server: ./clickhouse server client connect to server in new terminal: ./clickhouse client Database Schema:
 
+```
 CREATE TABLE Stock_Data (
     timestamp DateTime,
     name String,
@@ -16,5 +17,6 @@ CREATE TABLE Stock_Data (
 )
 ENGINE = MergeTree()
 PRIMARY KEY (name)
+```
 
 run ingester: python3 historic_ingester.py
